@@ -10,7 +10,7 @@ Kakor se vidi iz študijskega in izpitnega reda, se predvsem razlikujeta predvse
 
 ## Seznam predavanj
 
-* [Predavanje 1 - Uvod v Python](https://github.com/jankoslavic/pypinm/blob/master/Predavanje 1 - Uvod v Python.ipynb)
+* [Predavanje 1 - Uvod v Python](./Predavanje 1 - Uvod v Python.ipynb)
 * [Predavanje 2 - Print, delo z datotekami, funkcije, moduli](https://github.com/jankoslavic/pypinm/blob/master/Predavanje 2 - Print, delo z datotekami, funkcije, moduli.ipynb)
 * [Predavanje 3 - Moduli, numpy, matplotlib](https://github.com/jankoslavic/pypinm/blob/master/Predavanje 3 - Moduli, numpy, matplotlib.ipynb)
 * [Predavanje 4 - Moduli, uporabniški vmesnik](https://github.com/jankoslavic/pypinm/blob/master/Predavanje 4 - Moduli, uporabniški vmesnik.ipynb)
