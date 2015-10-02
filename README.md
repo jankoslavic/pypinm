@@ -26,4 +26,4 @@ Kakor se vidi iz študijskega in izpitnega reda, se predvsem razlikujeta predvse
 * [Predavanje 14 - Testiranje pravilnosti kode, uporabniški vmesnik](./Predavanje 14 - Testiranje pravilnosti kode, uporabniški vmesnik.ipynb)
 
 ## Dovoljenje za uporabo (License)
-To delo je prosto za nekomerialno uporabo pri čemer morate navesti vir in avtorja.
+To delo je prosto za nekomerialno uporabo pri čemer morate navesti vir, avtorja in Fakulteto za strojništvo, Univerze v Ljubljani.
