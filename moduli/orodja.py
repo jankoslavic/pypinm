@@ -41,7 +41,7 @@ def gaussova_eliminacija(A, b, prikazi_korake=False):
     Ab = np.column_stack((A, b))
     for p, pivot_vrsta in enumerate(Ab[:-1]):
         for vrsta in Ab[p + 1:]:
-            if pivot_vrsta[p] != 0:
+            if pivot_vrsta[p]:
                 vrsta[p:] = vrsta[p:] - pivot_vrsta[p:] * vrsta[p] / pivot_vrsta[p]
         if prikazi_korake:
             print('Korak: {:g}'.format(p))
@@ -64,7 +64,7 @@ def gaussova_eliminacija_pivotiranje(A, b, prikazi_korake=False):
             Ab[[p], :], Ab[[p_max], :] = Ab[[p_max], :], Ab[[p], :]
         pivot_vrsta = Ab[p, :]
         for vrsta in Ab[p + 1:]:
-            if pivot_vrsta[p] != 0:
+            if pivot_vrsta[p]:
                 vrsta[p:] = vrsta[p:] - pivot_vrsta[p:] * vrsta[p] / pivot_vrsta[p]
         if prikazi_korake:
             print('Korak: {:g}'.format(p))
@@ -91,7 +91,7 @@ def LU_razcep(A):
     # eliminacija
     for p, pivot_vrsta in enumerate(A[:-1]):
         for i, vrsta in enumerate(A[p + 1:]):
-            if pivot_vrsta[p] != 0:
+            if pivot_vrsta[p]:
                 m = vrsta[p] / pivot_vrsta[p]
                 vrsta[p:] = vrsta[p:] - pivot_vrsta[p:] * m
                 vrsta[p] = m
@@ -127,7 +127,7 @@ def LU_razcep_pivotiranje(A, prikazi_korake=False):
             pivotiranje[p], pivotiranje[p_max] = pivotiranje[p_max], pivotiranje[p]
         pivot_vrsta = LU[p, :]
         for vrsta in LU[p + 1:]:
-            if pivot_vrsta[p] != 0:
+            if pivot_vrsta[p]:
                 m = vrsta[p] / pivot_vrsta[p]
                 vrsta[p:] = vrsta[p:] - pivot_vrsta[p:] * m
                 vrsta[p] = m
