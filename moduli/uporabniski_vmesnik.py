@@ -1,15 +1,8 @@
 __author__ = 'Janko Slavic'
 
 import sys
-from matplotlib.backends import qt_compat
-use_pyside = qt_compat.QT_API == qt_compat.QT_API_PYSIDE
-
-if use_pyside: # tukaj importiramo en ali drugi modul (odvisno kaj imamo nameščeno)
-    from PySide import QtCore
-    from PySide import QtGui
-else:
-    from PyQt4 import QtCore
-    from PyQt4 import QtGui
+from PyQt4 import QtCore
+from PyQt4 import QtGui
 
 import time
 import numpy as np

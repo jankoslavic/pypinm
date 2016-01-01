@@ -1,15 +1,9 @@
 __author__ = 'Janko Slavic'
 
 import sys
-from matplotlib.backends import qt_compat
-use_pyside = qt_compat.QT_API == qt_compat.QT_API_PYSIDE
 
-if use_pyside: # tukaj importiramo en ali drugi modul (odvisno kaj imamo nameščeno)
-    from PySide import QtCore
-    from PySide import QtGui
-else:
-    from PyQt4 import QtCore
-    from PyQt4 import QtGui
+from PyQt4 import QtCore
+from PyQt4 import QtGui
 
 import time
 import numpy as np
@@ -43,34 +37,47 @@ class MainWindow(QtGui.QMainWindow):
     def init_central_widget(self):
         """ Vsebina centralnega okna
         """
+        #najprej ustvarimo centralni widget
         self.central_widget = QtGui.QWidget()
-        self.buttons_widget = QtGui.QWidget()
+        self.setCentralWidget(self.central_widget)
+
+        #nato naredimo vertikalni razpored in ga priredimo central_widget
         v_layout = QtGui.QVBoxLayout()
-        h_layout = QtGui.QHBoxLayout()
+        self.central_widget.setLayout(v_layout)
+
+        #sedaj dodamo v polje a tekstovni vnos in widget za gumbe v v_layout
         self.function_text = QtGui.QTextEdit()
+        self.buttons_widget = QtGui.QWidget()
+        v_layout.addWidget(self.function_text)
+        v_layout.addWidget(self.buttons_widget)
+
+        #gumbe bomo dali v horizontalni razpored
+        h_layout = QtGui.QHBoxLayout()
+        self.buttons_widget.setLayout(h_layout)
+
+        #definiramo polje za vnos
         self.function_text.setFontPointSize(20)
         self.function_text.setText('np.sin')
         self.function_text.setMaximumHeight(50)
+
+        #definiramo dva gumba
         self.submit_btn = QtGui.QPushButton('Prikaži')
         self.submit_btn.pressed.connect(self.refresh_figure)
         self.animate_btn = QtGui.QPushButton('Animiraj')
         self.animate_btn.pressed.connect(self.animate_figure)
         self.animate_btn.setCheckable(True)
-        self.get_figure()
 
-        self.central_widget.setLayout(v_layout)
-        v_layout.addWidget(self.function_text)
-        v_layout.addWidget(self.buttons_widget)
+        #oba gumba sedaj dodamo v horizontalni razpored
+        h_layout.addStretch() # se prilagodi, da je na levi prosti prostor
+        h_layout.addWidget(self.submit_btn)
+        h_layout.addWidget(self.animate_btn)
+        h_layout.addStretch() # za prosti prostor na desni
+        #self.get_figure()
+
         #v_layout.addWidget(self.canvas)
         #v_layout.addWidget(self.canvas_toolbar)
 
-        self.buttons_widget.setLayout(h_layout)
-        h_layout.addStretch()
-        h_layout.addWidget(self.submit_btn)
-        h_layout.addWidget(self.animate_btn)
-        h_layout.addStretch()
 
-        self.setCentralWidget(self.central_widget)
 
     def init_menus(self):
         """ Pripravi menuje
@@ -116,7 +123,10 @@ class MainWindow(QtGui.QMainWindow):
         pass
 
     def refresh_figure(self):
-        pass
+        #namesto prikaza slike, tukaj prikažemo uporabo izbirnega okna
+        strList = ['sin', 'cos', 'tan', 'exp']
+        text, ok = QtGui.QInputDialog.getItem(self, 'Primer izbirnega okna', 'Izberite:', strList)
+        self.function_text.setText('np.' + text)
 
     def show_progress(self):
         """ Prikaži napredek
