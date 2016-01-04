@@ -24,7 +24,7 @@ class MainWindow(QtGui.QMainWindow):
         self.init_central_widget()
         self.init_actions()
         self.init_menus()
-        self.phase = 0
+#        self.phase = 0
         # tole bomo rabili pri animaciji
 
     def init_status_bar(self):
