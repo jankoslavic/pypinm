@@ -24,6 +24,9 @@ Kakor se vidi iz študijskega in izpitnega reda, se predvsem razlikujeta predvse
 * [Predavanje 12 - Numerično reševanje diferencialnih enačb - začetni problem](./Predavanje 12 - Numerično reševanje diferencialnih enačb - začetni problem.ipynb)
 * [Predavanje 13 - Numerično reševanje diferencialnih enačb - robni problem](./Predavanje 13 - Numerično reševanje diferencialnih enačb - robni problem.ipynb)
 * [Predavanje 14 - Testiranje pravilnosti kode, uporabniški vmesnik](./Predavanje 14 - Testiranje pravilnosti kode, uporabniški vmesnik.ipynb)
+* [Predavanje 15 - Uvod v mathematico*](./Uvod v Mathematico.nb)
+
+\* Fakultativno predavanje
 
 ## Dovoljenje za uporabo (License)
 To delo je prosto za nekomercialno uporabo pri čemer morate navesti vir, avtorja in Fakulteto za strojništvo, Univerze v Ljubljani.
