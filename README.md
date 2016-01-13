@@ -26,7 +26,7 @@ Kakor se vidi iz študijskega in izpitnega reda, se predvsem razlikujeta predvse
 * [Predavanje 14 - Testiranje pravilnosti kode, uporabniški vmesnik](./Predavanje 14 - Testiranje pravilnosti kode, uporabniški vmesnik.ipynb)
 * [Predavanje 15 - Uvod v Mathematico*](./Uvod v Mathematico.nb)
 
-\* Fakultativno predavanje
+\* Fakultativno predavanje, študentje Fakultete za strojništvo UNI-LJ imate možnost pridobiti licenčno verzijo programa Mathematica na tej [povezavi](http://www.fs.uni-lj.si/studijska_dejavnost/it_podpora/programska_oprema_za_studente/2015071415154271/Registracija%20Mathematica/).
 
 ## Dovoljenje za uporabo (License)
 To delo je prosto za nekomercialno uporabo pri čemer morate navesti vir, avtorja in Fakulteto za strojništvo, Univerze v Ljubljani.
