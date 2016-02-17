@@ -1,3 +1,4 @@
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/jankoslavic/pypinm)
 # Programiranje in numerične metode v ekosistemu Pythona
 
 Predavanja temeljijo na ekosistemu Python in bodo izvedena v obliki Jupyter notebook-ov. 
