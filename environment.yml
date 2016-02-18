@@ -1,0 +1,10 @@
+name: py35-env
+
+dependencies:
+  - python=3.5
+  - numpy
+  - scipy
+  - seaborn
+  - bokeh
+  - pip:
+    - lvm_read
