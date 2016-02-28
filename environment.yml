@@ -4,7 +4,7 @@ dependencies:
   - python=3.5
   - numpy
   - scipy
+  - matplotlib
   - seaborn
-  - bokeh
   - pip:
     - lvm_read
