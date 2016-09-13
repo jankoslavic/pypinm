@@ -1,0 +1,18 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/
+.ipynb_checkpoints/
+PiNM2014.ipynb
+Untitled.ipynb
+Untitled1.ipynb
+_interesting/
+_vaje JU/
+_vaje LK/
+_vaje LK_MM_MMi_BS/
+_videos/
+debug.log
+moduli/__pycache__/
+projekt/.ipynb_checkpoints/
+projekt/__pycache__/
+vaje/.ipynb_checkpoints/
+working.ipynb
