@@ -1,6 +1,6 @@
 FROM andrewosh/binder-base
 
-MAINTAINER Janko Slavič <janko.slavic@fs.uni-lj.si>
+MAINTAINER Michael Bright <dockerfiles@mjbright.net>
 
 USER root
 
