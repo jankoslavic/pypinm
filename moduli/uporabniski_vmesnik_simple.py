@@ -2,21 +2,22 @@ __author__ = 'Janko Slavic'
 
 import sys
 
-from PyQt4 import QtCore
-from PyQt4 import QtGui
+from PyQt5 import QtCore
+from PyQt5 import QtWidgets
+from PyQt5 import QtGui
 
 import time
 import numpy as np
 
 
-class MainWindow(QtGui.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow):
     """ Podedovano glavno okno
     """
 
     def __init__(self):
         """ Konstruktor MainWindow objekta
         """
-        QtGui.QMainWindow.__init__(self)
+        QtWidgets.QMainWindow.__init__(self)
         self.setWindowTitle('Glavno okno')
         self.setGeometry(50, 50, 600, 400)
         # self.showMaximized()
@@ -30,7 +31,7 @@ class MainWindow(QtGui.QMainWindow):
     def init_status_bar(self):
         """ Function to create Status Bar
         """
-        self.status_bar = QtGui.QStatusBar()
+        self.status_bar = QtWidgets.QStatusBar()
         self.status_bar.showMessage('Pripravljen', 2000)
         self.setStatusBar(self.status_bar)
 
@@ -38,21 +39,21 @@ class MainWindow(QtGui.QMainWindow):
         """ Vsebina centralnega okna
         """
         #najprej ustvarimo centralni widget
-        self.central_widget = QtGui.QWidget()
+        self.central_widget = QtWidgets.QWidget()
         self.setCentralWidget(self.central_widget)
 
         #nato naredimo vertikalni razpored in ga priredimo central_widget
-        v_layout = QtGui.QVBoxLayout()
+        v_layout = QtWidgets.QVBoxLayout()
         self.central_widget.setLayout(v_layout)
 
         #sedaj dodamo v polje a tekstovni vnos in widget za gumbe v v_layout
-        self.function_text = QtGui.QTextEdit()
-        self.buttons_widget = QtGui.QWidget()
+        self.function_text = QtWidgets.QTextEdit()
+        self.buttons_widget = QtWidgets.QWidget()
         v_layout.addWidget(self.function_text)
         v_layout.addWidget(self.buttons_widget)
 
         #gumbe bomo dali v horizontalni razpored
-        h_layout = QtGui.QHBoxLayout()
+        h_layout = QtWidgets.QHBoxLayout()
         self.buttons_widget.setLayout(h_layout)
 
         #definiramo polje za vnos
@@ -61,9 +62,9 @@ class MainWindow(QtGui.QMainWindow):
         self.function_text.setMaximumHeight(50)
 
         #definiramo dva gumba
-        self.submit_btn = QtGui.QPushButton('Prikaži')
+        self.submit_btn = QtWidgets.QPushButton('Prikaži')
         self.submit_btn.pressed.connect(self.refresh_figure)
-        self.animate_btn = QtGui.QPushButton('Animiraj')
+        self.animate_btn = QtWidgets.QPushButton('Animiraj')
         self.animate_btn.pressed.connect(self.animate_figure)
         self.animate_btn.setCheckable(True)
 
@@ -90,7 +91,9 @@ class MainWindow(QtGui.QMainWindow):
         self.help_menu.addAction(self.help_action)
 
     def file_show_help(self):
-        QtGui.QMessageBox.about(self,
+        #za debaguiranje uporabi tole
+        # QtGui.QMessageBox.about(self,
+        QtWidgets.QMessageBox.about(self,
                                 'Prikaz pojavnega okna s tekstom.',
                                 'Python in Qt :)\nVpišite numpy funkcijo')
 
@@ -103,15 +106,15 @@ class MainWindow(QtGui.QMainWindow):
     def init_actions(self):
         """ Pripravi actions za menuje
         """
-        self.new_file_action = QtGui.QAction('&Novo',
+        self.new_file_action = QtWidgets.QAction('&Novo',
                                              self, shortcut=QtGui.QKeySequence.New,
                                              statusTip="Novi prikaz",
                                              triggered=self.clear_input)
-        self.reset_action = QtGui.QAction('&Ponastavi',
+        self.reset_action = QtWidgets.QAction('&Ponastavi',
                                           self,
                                           statusTip="Ponastavi",
                                           triggered=self.reset_input)
-        self.help_action = QtGui.QAction(  # QtGui.QIcon('new.png') # tako bi lahko vključili ikono
+        self.help_action = QtWidgets.QAction(  # QtGui.QIcon('new.png') # tako bi lahko vključili ikono
                                            '&Pomoč',
                                            self,
                                            triggered=self.file_show_help)
@@ -125,7 +128,7 @@ class MainWindow(QtGui.QMainWindow):
     def refresh_figure(self):
         #namesto prikaza slike, tukaj prikažemo uporabo izbirnega okna
         strList = ['sin', 'cos', 'tan', 'exp']
-        text, ok = QtGui.QInputDialog.getItem(self, 'Primer izbirnega okna', 'Izberite:', strList)
+        text, ok = QtWidgets.QInputDialog.getItem(self, 'Primer izbirnega okna', 'Izberite:', strList)
         self.function_text.setText('np.' + text)
 
     def show_progress(self):
@@ -145,7 +148,7 @@ class MainWindow(QtGui.QMainWindow):
 
 if __name__ == '__main__':
     try:
-        app = QtGui.QApplication(sys.argv)
+        app = QtWidgets.QApplication(sys.argv)
         mainWindow = MainWindow()
         mainWindow.show()
         app.exec_()

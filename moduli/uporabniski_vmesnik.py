@@ -1,28 +1,29 @@
 __author__ = 'Janko Slavic'
 
 import sys
-from PyQt4 import QtCore
-from PyQt4 import QtGui
+from PyQt5 import QtCore
+from PyQt5 import QtGui
+from PyQt5 import QtWidgets
 
 import time
 import numpy as np
 
 import matplotlib
 
-matplotlib.use('Qt4Agg')
-from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg
-from matplotlib.backends.backend_qt4agg import NavigationToolbar2QT as NavigationToolbar
+matplotlib.use('Qt5Agg')
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
 
 
-class MainWindow(QtGui.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow):
     """ Podedovano glavno okno
     """
 
     def __init__(self):
         """ Konstruktor MainWindow objekta
         """
-        QtGui.QMainWindow.__init__(self)
+        QtWidgets.QMainWindow.__init__(self)
         self.setWindowTitle('Glavno okno')
         self.setGeometry(50, 50, 600, 400)
         # self.showMaximized()
@@ -39,16 +40,16 @@ class MainWindow(QtGui.QMainWindow):
     def init_status_bar(self):
         """ Function to create Status Bar
         """
-        self.status_bar = QtGui.QStatusBar()
+        self.status_bar = QtWidgets.QStatusBar()
         self.status_bar.showMessage('Pripravljen', 2000)
         self.setStatusBar(self.status_bar)
 
     def init_status_bar_with_progress(self):
         """ Function to create Status Bar with progress bar
         """
-        self.status_bar = QtGui.QStatusBar()
-        self.status_label = QtGui.QLabel('Status')
-        self.progress_bar = QtGui.QProgressBar()
+        self.status_bar = QtWidgets.QStatusBar()
+        self.status_label = QtWidgets.QLabel('Status')
+        self.progress_bar = QtWidgets.QProgressBar()
         self.progress_bar.setMinimum(0)
         self.progress_bar.setMaximum(100)
         self.progress_bar.setValue(0)
@@ -59,17 +60,17 @@ class MainWindow(QtGui.QMainWindow):
     def init_central_widget(self):
         """ Vsebina centralnega okna
         """
-        self.central_widget = QtGui.QWidget()
-        self.buttons_widget = QtGui.QWidget()
-        v_layout = QtGui.QVBoxLayout()
-        h_layout = QtGui.QHBoxLayout()
-        self.function_text = QtGui.QTextEdit()
+        self.central_widget = QtWidgets.QWidget()
+        self.buttons_widget = QtWidgets.QWidget()
+        v_layout = QtWidgets.QVBoxLayout()
+        h_layout = QtWidgets.QHBoxLayout()
+        self.function_text = QtWidgets.QTextEdit()
         self.function_text.setFontPointSize(20)
         self.function_text.setText('np.sin')
         self.function_text.setMaximumHeight(50)
-        self.submit_btn = QtGui.QPushButton('Prikaži')
+        self.submit_btn = QtWidgets.QPushButton('Prikaži')
         self.submit_btn.pressed.connect(self.refresh_figure)
-        self.animate_btn = QtGui.QPushButton('Animiraj')
+        self.animate_btn = QtWidgets.QPushButton('Animiraj')
         self.animate_btn.pressed.connect(self.animate_figure)
         self.animate_btn.setCheckable(True)
         self.get_figure()
@@ -99,7 +100,7 @@ class MainWindow(QtGui.QMainWindow):
         self.help_menu.addAction(self.help_action)
 
     def file_show_help(self):
-        QtGui.QMessageBox.about(self,
+        QtWidgets.QMessageBox.about(self,
                                 'Prikaz pojavnega okna s tekstom.',
                                 'Python in Qt :)\nVpišite numpy funkcijo')
 
@@ -112,15 +113,15 @@ class MainWindow(QtGui.QMainWindow):
     def init_actions(self):
         """ Pripravi actions za menuje
         """
-        self.new_file_action = QtGui.QAction('&Novo',
+        self.new_file_action = QtWidgets.QAction('&Novo',
                                              self, shortcut=QtGui.QKeySequence.New,
                                              statusTip="Novi prikaz",
                                              triggered=self.clear_input)
-        self.reset_action = QtGui.QAction('&Ponastavi',
+        self.reset_action = QtWidgets.QAction('&Ponastavi',
                                           self,
                                           statusTip="Ponastavi",
                                           triggered=self.reset_input)
-        self.help_action = QtGui.QAction(  # QtGui.QIcon('new.png') # tako bi lahko vključili ikono
+        self.help_action = QtWidgets.QAction(  # QtWidgets.QIcon('new.png') # tako bi lahko vključili ikono
                                            '&Pomoč',
                                            self,
                                            triggered=self.file_show_help)
@@ -137,7 +138,7 @@ class MainWindow(QtGui.QMainWindow):
             eq = eval(self.function_text.toPlainText())
         except AttributeError:
             self.timer.stop()
-            QtGui.QMessageBox.about(self, 'Napaka',
+            QtWidgets.QMessageBox.about(self, 'Napaka',
                                     'Ne morem prikazati funkcije {:s}'.format(self.function_text.toPlainText()))
             return
         x = self.phase + np.linspace(0, 10, 100)
@@ -156,7 +157,7 @@ class MainWindow(QtGui.QMainWindow):
         try:
             eq = eval(self.function_text.toPlainText())
         except AttributeError:
-            QtGui.QMessageBox.about(self, 'Napaka',
+            QtWidgets.QMessageBox.about(self, 'Napaka',
                                     'Ne morem prikazati funkcije {:s}'.format(self.function_text.toPlainText()))
             return
         x = self.phase + np.linspace(0, 10, 100)
@@ -174,14 +175,14 @@ class MainWindow(QtGui.QMainWindow):
         self.status_label.setText('Pripravljen')
 
     def mouseDoubleClickEvent(self, event):
-        """ Prepišemo podedovan dogodek v objektu QtGui.QMainWindow
+        """ Prepišemo podedovan dogodek v objektu QtWidgets.QMainWindow
             (dvo-kliknite npr na progress bar)
         """
         self.close()
 
 if __name__ == '__main__':
     try:
-        app = QtGui.QApplication(sys.argv)
+        app = QtWidgets.QApplication(sys.argv)
         mainWindow = MainWindow()
         mainWindow.show()
         mainWindow.show_progress()
