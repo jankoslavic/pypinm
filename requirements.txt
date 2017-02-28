@@ -1,1 +1,1 @@
-lvm_read>=1.13
+lvm_read>=1.0
