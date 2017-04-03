@@ -11,7 +11,8 @@ Kakor se vidi iz študijskega in izpitnega reda, se predvsem razlikujeta predvse
 
 ## Seznam predavanj
 
-* [Predavanje 1 - Uvod v Python](./Predavanje 01 - Uvod v Python.ipynb)
+* [Numerične metode 2l. RR](http://www.ladisk.si/?what=incfl&flnm=NM.php)
+* [Predavanje 1 - Uvod v Python](./Predavanje%2001%20-%20Uvod%20v%20Python.ipynb)
 * [Predavanje 2 - Print, delo z datotekami, funkcije, moduli](./Predavanje 02 - Print, delo z datotekami, funkcije, moduli.ipynb)
 * [Predavanje 3 - Moduli, numpy, matplotlib](./Predavanje 03 - Moduli, numpy, matplotlib.ipynb)
 * [Predavanje 4 - Objektno programiranje, simbolno računanje](./Predavanje 04 - Objektno programiranje, simbolno računanje.ipynb)
