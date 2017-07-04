@@ -1,1 +1,1 @@
-# V tej mapi se nahajajo primeri nalog iz numeričnih metod + primer izpita iz nalog
+# V tej mapi se nahajajo primeri nalog iz numeričnih metod + primer izpita
