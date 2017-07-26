@@ -43,6 +43,8 @@ def gaussova_eliminacija(A, b, prikazi_korake=False):
         for vrsta in Ab[p + 1:]:
             if pivot_vrsta[p]:
                 vrsta[p:] = vrsta[p:] - pivot_vrsta[p:] * vrsta[p] / pivot_vrsta[p]
+            else:
+                raise Exception('Deljenje z 0.')
         if prikazi_korake:
             print('Korak: {:g}'.format(p))
             print(Ab)
@@ -66,6 +68,8 @@ def gaussova_eliminacija_pivotiranje(A, b, prikazi_korake=False):
         for vrsta in Ab[p + 1:]:
             if pivot_vrsta[p]:
                 vrsta[p:] = vrsta[p:] - pivot_vrsta[p:] * vrsta[p] / pivot_vrsta[p]
+            else:
+                raise Exception('Deljenje z 0.')
         if prikazi_korake:
             print('Korak: {:g}'.format(p))
             print('Pivot vrsta:', pivot_vrsta)
@@ -82,7 +86,7 @@ def gaussova_el_resitev(Ab):
     v = len(Ab)
     x = np.zeros(v)
     for p, pivot_vrsta in enumerate(Ab[::-1]):
-        x[v - p - 1] = (pivot_vrsta[-1] - np.dot(pivot_vrsta[v - p:-1], x[v - p:])) / (pivot_vrsta[v - p - 1])
+        x[v - p - 1] = (pivot_vrsta[-1] - pivot_vrsta[v - p:-1] @ x[v - p:]) / (pivot_vrsta[v - p - 1])
     return x
 
 
@@ -106,7 +110,7 @@ def LU_resitev(LU, b):
         y[i] = (b_ - np.dot(LU[i, :i], y[:i]))
     v = len(b)
     for i in range(v - 1, -1, -1):
-        x[i] = (y[i] - np.dot(LU[i, i + 1:], x[i + 1:])) / LU[i, i]
+        x[i] = (y[i] - LU[i, i + 1:] @ x[i + 1:]) / LU[i, i]
     return x
 
 
@@ -131,6 +135,8 @@ def LU_razcep_pivotiranje(A, prikazi_korake=False):
                 m = vrsta[p] / pivot_vrsta[p]
                 vrsta[p:] = vrsta[p:] - pivot_vrsta[p:] * m
                 vrsta[p] = m
+            else:
+                raise Exception('Deljenje z 0.')
         if prikazi_korake:
             print('Korak: {:g}'.format(p))
             print('Pivot vrsta:', pivot_vrsta)
@@ -146,10 +152,10 @@ def LU_resitev_pivotiranje(LU, b, pivotiranje):
     y = np.zeros_like(b)
     x = np.zeros_like(b)
     for i, b_ in enumerate(b[pivotiranje]):
-        y[i] = (b_ - np.dot(LU[i, :i], y[:i]))
+        y[i] = (b_ - LU[i, :i] @ y[:i])
     v = len(b)
     for i in range(v - 1, -1, -1):
-        x[i] = (y[i] - np.dot(LU[i, i + 1:], x[i + 1:])) / LU[i, i]
+        x[i] = (y[i] - LU[i, i + 1:] @ x[i + 1:]) / LU[i, i]
     return x
 
 
