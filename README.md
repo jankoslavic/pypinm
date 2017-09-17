@@ -16,7 +16,7 @@ Kakor se vidi iz študijskega in izpitnega reda, se predvsem razlikujeta predvse
 * [Predavanje 3 - Moduli, numpy, matplotlib](./Predavanje%2003%20-%20Moduli,%20numpy,%20matplotlib.ipynb)
 * [Predavanje 4 - Objektno programiranje, simbolno računanje](./Predavanje%2004%20-%20Objektno%20programiranje,%20simbolno%20računanje.ipynb)
 * [Predavanje 5 - Uvod v numerične metode in sistemi linearnih enačb 1](./Predavanje%2005%20-%20Uvod%20v%20numerične%20metode%20in%20sistemi%20linearnih%20enačb%201.ipynb)
-* [Predavanje 6 - Sistemi linearnih algebrajskih enačb 2](./Predavanje%2006%20-%20Sistemi%20linearnih%20algebrajskih%20enačb%202.ipynb)
+* [Predavanje 6 - Sistemi linearnih enačb 2](./Predavanje%2006%20-%20Sistemi%20linearnih%20enačb%202.ipynb)
 * [Predavanje 7 - Interpolacija](./Predavanje%2007%20-%20Interpolacija.ipynb)
 * [Predavanje 8 - Aproksimacija](./Predavanje%2008%20-%20Aproksimacija.ipynb)
 * [Predavanje 9 - Reševanje enačb](./Predavanje%2009%20-%20Reševanje%20enačb.ipynb)
