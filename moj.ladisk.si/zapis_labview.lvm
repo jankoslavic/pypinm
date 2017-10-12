@@ -1,0 +1,33 @@
+LabVIEW Measurement	
+Writer_Version	2
+Reader_Version	2
+Separator	Tab
+Decimal_Separator	,
+Multi_Headings	Yes
+X_Columns	No
+Time_Pref	Absolute
+Operator	JS
+Date	2013/02/19
+Time	09:51:39,1970510124996275989
+***End_of_Header***	
+	
+Channels	2		
+Samples	10	10	
+Date	2013/02/19	2013/02/19	
+Time	09:51:40,7271890640258789063	09:51:40,7271890640258789063	
+Y_Unit_Label	Newtons	m/s^2	
+X_Dimension	Time	Time	
+X0	0,0000000000000000E+0	0,0000000000000000E+0	
+Delta_X	3,906250E-5	3,906250E-5	
+***End_of_Header***			
+X_Value	Vzbujanje (Trigger)	Odziv1 (Trigger)	Comment
+	0,914018	1,204792
+	0,537321	1,208403
+	0,616905	1,213915
+	0,895449	1,212205
+	0,574460	1,222088
+	0,516099	1,218223
+	1,046658	1,213408
+	0,394070	1,221011
+	0,741586	1,211888
+	0,680572	1,212775
