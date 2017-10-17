@@ -6,7 +6,8 @@ import os
 import nbformat
 import shutil
 
-EXCLUDE_NOTEBOOKS = ['NM2016.ipynb',
+EXCLUDE_NOTEBOOKS = ['NM2017.ipynb',
+					 'NM2016.ipynb',
                      'PiNM2016-17.ipynb',
                      'Predavanje 10b - Taylorjeve vrste.ipynb',
                      'working.ipynb']
@@ -18,7 +19,7 @@ Template: {template}
 {{% notebook notebooks/{notebook_file} cells[{cells}] %}}
 """
 
-INTRO_TEXT = """Ta domača stran je pripravljena na podlagi spletnega učbenika 
+INTRO_TEXT = """Ta domača stran je pripravljena na podlagi izvršljivega učbenika 
 [Programiranje in numerične metode v ekosistemu Pythona](https://github.com/jankoslavic/pypinm), 
 ki ga je pripravil Janko Slavič v obliki Jupyter notebookov.
 """
