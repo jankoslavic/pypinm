@@ -1,5 +1,5 @@
 """
-Unit test za orodja.py
+Preverjanje pravilnosti kode v modulu orodja.py
 """
 
 __author__ = 'Janko Slavic'
@@ -36,5 +36,3 @@ def test_simbolni_izraz():
     b = (x**4)**(1/2)
     np.testing.assert_equal(a==b,True)
 
-if __name__ == '__mains__':
-    np.testing.run_module_suite()
