@@ -1,4 +1,3 @@
-[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/jankoslavic/pypinm)
 # Programiranje in numerične metode v ekosistemu Pythona
 
 Predavanja temeljijo na ekosistemu Python in bodo izvedena v obliki Jupyter notebook-ov. 
@@ -7,7 +6,9 @@ Tukaj predstavljena vsebina je osnova za dva predmeta, ki se poučujeta na [Faku
 * [Numerične metode 2l. RR](http://www.ladisk.si/?what=incfl&flnm=NM.php)
 * [Programiranje in numerične metode 2l. PAP](http://www.ladisk.si/?what=incfl&flnm=PiNM.php)
 
-Kakor se vidi iz študijskega in izpitnega reda, se predvsem razlikujeta predvsem po zahtevnosti.
+Poženite izvršljivo knjigo na spletu:
+<a href="https://notebooks.azure.com/import/gh/jankoslavic/pypinm"><img src="https://notebooks.azure.com/launch.png" /></a>
+
 
 ## Seznam predavanj
 
