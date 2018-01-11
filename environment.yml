@@ -1,10 +1,11 @@
-name: py36-env
+name: example-environment
 channels:
   - conda-forge
 dependencies:
-  - python=3.6
+  - python
   - numpy
-  - scipy
-  - matplotlib
   - pip:
-    - lvm_read
+    - nbgitpuller
+    - sphinx-gallery
+    - pandas
+    - matplotlib
