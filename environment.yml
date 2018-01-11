@@ -1,0 +1,10 @@
+name: py36-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - numpy
+  - scipy
+  - matplotlib
+  - pip:
+    - lvm_read
