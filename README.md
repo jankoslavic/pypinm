@@ -1,4 +1,5 @@
 # Programiranje in numerične metode v ekosistemu Pythona
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/jankoslavic/pypinm/master)
 
 Predavanja temeljijo na ekosistemu Python in bodo izvedena v obliki Jupyter notebook-ov. 
 Tukaj predstavljena vsebina je osnova za dva predmeta, ki se poučujeta na [Fakulteti za strojništvo (Univerza v Ljubljani)](www.fs.uni-lj.si):
