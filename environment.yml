@@ -1,11 +1,9 @@
-name: example-environment
+name: env-py
 channels:
   - conda-forge
 dependencies:
   - python
   - numpy
-  - pip:
-    - nbgitpuller
-    - sphinx-gallery
-    - pandas
-    - matplotlib
+  - pandas
+  - matplotlib
+  - scipy
