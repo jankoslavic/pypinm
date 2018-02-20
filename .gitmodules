@@ -1,6 +1,3 @@
-[submodule "website/plugins/ipynb"]
-	path = website/plugins/ipynb
-	url = git://github.com/danielfrg/pelican-ipynb.git
-[submodule "website/plugins/pelican-plugins"]
-	path = website/plugins/pelican-plugins
-	url = git://github.com/getpelican/pelican-plugins.git
+[submodule "website"]
+	path = website
+	url = git://https://github.com/jankoslavic/pypinm.io.git
