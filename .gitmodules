@@ -1,3 +1,4 @@
 [submodule "website"]
 	path = website
 	url = git://https://github.com/jankoslavic/pypinm.io.git
+	ignore = dirty
