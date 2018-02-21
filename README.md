@@ -6,7 +6,7 @@ Tukaj predstavljena vsebina je osnova za dva predmeta, ki se poučujeta na [Faku
 * [Numerične metode 2l. RR](http://www.ladisk.si/?what=incfl&flnm=NM.php)
 * [Programiranje in numerične metode 2l. PAP](http://www.ladisk.si/?what=incfl&flnm=PiNM.php)
 
-Poženite to izvršljivo knjigo na spletu: 
+Poženite to izvršljivo knjigo na spletu: <br>
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/jankoslavic/pypinm/master)<br>
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/jankoslavic/pypinm/master?urlpath=lab)(lab)<br>
 <a href="https://notebooks.azure.com/import/gh/jankoslavic/pypinm"><img src="https://notebooks.azure.com/launch.png" /></a>
