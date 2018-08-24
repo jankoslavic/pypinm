@@ -14,8 +14,8 @@ Poženite to izvršljivo knjigo na spletu: <br>
 
 ## Seznam predavanj
 
-* [Predavanje 1 - Uvod v Python](./Predavanje%2001%20-%20Uvod%20v%20Python.ipynb)[<img src="./fig/colab.png" height="20">](http://colab.research.google.com/github/jankoslavic/pypinm/blob/master/Predavanje%2008%20-%20Aproksimacija.ipynb)
-* [Predavanje 2 - Print, delo z datotekami, funkcije, moduli](./Predavanje%2002%20-%20Print,%20delo%20z%20datotekami,%20funkcije,%20moduli.ipynb)
+* [Predavanje 1 - Uvod v Python](./Predavanje%2001%20-%20Uvod%20v%20Python.ipynb)[<img src="./fig/colab.png" height="30">](http://colab.research.google.com/github/jankoslavic/pypinm/blob/master/Predavanje%2008%20-%20Aproksimacija.ipynb)
+* [Predavanje 2 - Print, delo z datotekami, funkcije, moduli](./Predavanje%2002%20-%20Print,%20delo%20z%20datotekami,%20funkcije,%20moduli.ipynb)[<img src="./fig/colab.png" height="30">](http://colab.research.google.com/github/jankoslavic/pypinm/blob/master/Predavanje%2002%20-%20Print,%20delo%20z%20datotekami,%20funkcije,%20moduli.ipynb)
 * [Predavanje 3 - Moduli, numpy, matplotlib](./Predavanje%2003%20-%20Moduli,%20numpy,%20matplotlib.ipynb)
 * [Predavanje 4 - Objektno programiranje, simbolno računanje](./Predavanje%2004%20-%20Objektno%20programiranje,%20simbolno%20računanje.ipynb)
 * [Predavanje 5 - Uvod v numerične metode in sistemi linearnih enačb 1](./Predavanje%2005%20-%20Uvod%20v%20numerične%20metode%20in%20sistemi%20linearnih%20enačb%201.ipynb)
