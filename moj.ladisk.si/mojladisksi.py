@@ -84,12 +84,12 @@ def poslji(odgovor, id, st):
     :param id: identifikacijska številka naloge
     :param st: zaporedna številka odgovora
     """
-    url = 'https://moj.ladisk.si'
+    url = 'https://moj.ladisk.si/'
     client = requests.session()
-    r = client.get(os.path.join(url, 'get_token'))
+    r = client.get(url + 'get_token')
     csrftoken = client.cookies['csrftoken']
     cookies = dict(client.cookies)
-    headers = {'Content-type':'application/json', "X-CSRFToken":csrftoken}
+    headers = {'Content-type':'application/json', "X-CSRFToken":csrftoken, 'Referer':url}
     
     data = {
         'sa_id': id,
@@ -99,7 +99,7 @@ def poslji(odgovor, id, st):
 
     json_data = json.dumps(data, default=data_to_json)
 
-    r = requests.post(os.path.join(url, 'StudentData'),
+    r = requests.post(url + 'StudentData',
                         json=json_data, #json_data, če rabiš default data_to_json funkcijo
                         headers=headers,
                         cookies=cookies)
