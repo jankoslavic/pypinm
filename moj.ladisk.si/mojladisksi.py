@@ -1,4 +1,5 @@
 import numpy as np
+import os
 import json
 from sys import getsizeof
 import requests
@@ -83,12 +84,12 @@ def poslji(odgovor, id, st):
     :param id: identifikacijska številka naloge
     :param st: zaporedna številka odgovora
     """
-    url = 'http://moj.ladisk.si:8000/'
+    url = 'https://moj.ladisk.si/'
     client = requests.session()
-    r = client.get(url+'get_token')
+    r = client.get(url + 'get_token')
     csrftoken = client.cookies['csrftoken']
     cookies = dict(client.cookies)
-    headers = {'Content-type':'application/json', "X-CSRFToken":csrftoken}
+    headers = {'Content-type':'application/json', "X-CSRFToken":csrftoken, 'Referer':url}
     
     data = {
         'sa_id': id,
