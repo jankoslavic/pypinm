@@ -68,11 +68,18 @@ def data_to_json(object):
     """
     Pripravi posredovan objekt za JSON serilizacijo. V `pripravi_resitev`?
     """
+
     if isinstance(object, np.ndarray):
         return {'type': str(np.ndarray), 'dtype': str(object.dtype), 'tolist': object.tolist()}
 
     if isinstance(object, complex):
         return (object.real, object.imag)
+
+    if type(object) in np.sctypes['int'] + np.sctypes['uint']:
+        return int(object)
+    
+    if type(object) in np.sctypes['float']:
+        return float(object)
 
     raise TypeError(f'Object of type {type(object)} not serializable')
 
