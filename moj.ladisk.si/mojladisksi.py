@@ -4,15 +4,22 @@ import json
 from sys import getsizeof
 import requests
 
-DOVOLJENI_TIPI = ['str', 'int', 'ndarray', 'float', 'tuple', 'list']
+DOVOLJENI_TIPI = ['str', 'int', 'float', 'ndarray', 'tuple', 'list', 'dict']
 MAX_LEN = 15
 MAX_SIZE = 10e3 #bit
 
+int_type_names = [_.__name__ for _ in np.sctypes['int'] + np.sctypes['uint']] + ['int']
+float_type_names = [_.__name__ for _ in np.sctypes['float']] + ['float', 'Float', 'Zero']
+
+
 def pripravi_resitev(odgovor):
-    """ Funkcija pripravi rešitev za posredovanje na strežnik.
+    """ 
+    Funkcija pripravi rešitev za posredovanje na strežnik.
+    Poimenovanje ključev je pomembno pri preverjanju odgovorov - naj se ne spreminja!
     Rezultat je: tip                (vsi)
                  vrednost           (NE ndarray)
-                 povprečna vrednost (ndarray)
+                 dtype              (ndarray)
+                 mean               (ndarray)
                  shape              (ndarray)
                  flat               (ndarray)
                  flat_size          (ndarray)
@@ -22,17 +29,17 @@ def pripravi_resitev(odgovor):
 
     tip = type(odgovor).__name__
 
-    if tip in ['int', 'int32']:
+    if tip in int_type_names:
         out['tip'] = 'int'
         out['vrednost'] = int(odgovor)
         return out
     
-    elif tip in ['float', 'Float', 'Zero', 'float64']:
+    elif tip in float_type_names:
         out['tip'] = 'float'
         out['vrednost'] = float(odgovor)
         return out
     
-    elif tip in ['str', 'list', 'tuple']:
+    elif tip in ['str', 'list', 'tuple', 'dict']:
         bit_size = getsizeof(odgovor)
         if bit_size < MAX_SIZE:
             out['tip'] = tip
@@ -42,44 +49,40 @@ def pripravi_resitev(odgovor):
             raise Exception(f'Napaka: Oddan odgovor, z velikostjo {bit_size/1e3:5.2f} kb, presega največjo dovoljeno velikost {MAX_SIZE/1e3:5.2f} kb.')
     
     elif tip in ['ndarray']:
-        val = np.asarray(odgovor)
-
-        out['tip'] = tip
-        out['dtype'] = str(val.dtype)
-        out['povprecna_vrednost'] = np.mean(val)
-        out['shape'] = val.shape
-        flat = prepare_ndarray(val)
-        out['flat'] = flat
-        out['flat_size'] = len(flat)
+        out.update(prepare_ndarray(odgovor))
         return out
     
     else:
         raise Exception('Napaka: rezultat tipa \'{0:s}\' ne ustreza pričakovanim tipom: {1:s}!'.format(tip, dovoljeni_tipi))
 
+
 def prepare_ndarray(array, MAX_LEN=15):
     """
-    Pripravi numpy.ndarray za oddajo (flatten, skrajša na MAX_LEN in pretvori v seznam).
+    Pripravi numpy.ndarray za oddajo - flatten, skrajša na MAX_LEN , pretvori v seznam 
+    in zapakira v dict (tip:'ndarray', dtype, mean, shape, flat, flat_size).
+    Poimenovanje ključev je pomembno pri preverjanju odgovorov - naj se ne spreminja!
     """
     flat = array.flatten()
     if len(flat) > MAX_LEN:
         inc = len(flat) // MAX_LEN + 1
         flat = flat[::inc]
-    return flat.tolist()
+    flat_list = flat.tolist()
+    return {
+        'tip': 'ndarray',
+        'dtype': array.dtype.name,
+        'mean': np.mean(array),
+        'shape': array.shape,
+        'flat': flat_list,
+        'flat_size': len(flat_list),
+    }
 
 
 def data_to_json(object):
     """
-    Pripravi posredovan objekt za JSON serilizacijo. V `pripravi_resitev`?
+    Pripravi posredovan objekt za JSON serilizacijo.
     """
-
     if isinstance(object, np.ndarray):
-        return {
-            'type': str(np.ndarray), 
-            'dtype': str(object.dtype), 
-            'shape': object.shape,
-            'mean': np.mean(object), 
-            'tolist': prepare_ndarray(object)
-            }
+        return prepare_ndarray(object)
 
     if isinstance(object, complex):
         return (object.real, object.imag)
