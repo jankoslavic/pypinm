@@ -10,7 +10,6 @@ MAX_SIZE = 10e3 #bit
 
 def pripravi_resitev(odgovor):
     """ Funkcija pripravi rešitev za posredovanje na strežnik.
-
     Rezultat je: tip                (vsi)
                  vrednost           (NE ndarray)
                  povprečna vrednost (ndarray)
@@ -49,19 +48,23 @@ def pripravi_resitev(odgovor):
         out['dtype'] = str(val.dtype)
         out['povprecna_vrednost'] = np.mean(val)
         out['shape'] = val.shape
-
-        flat = val.flatten()
-        vsak = 1
-        if len(flat) > MAX_LEN:
-            vsak = len(flat) // MAX_LEN + 1
-            flat = flat[::vsak]
-        
-        out['flat'] = flat.tolist()
+        flat = prepare_ndarray(val)
+        out['flat'] = flat
         out['flat_size'] = len(flat)
         return out
     
     else:
         raise Exception('Napaka: rezultat tipa \'{0:s}\' ne ustreza pričakovanim tipom: {1:s}!'.format(tip, dovoljeni_tipi))
+
+def prepare_ndarray(array, MAX_LEN=15):
+    """
+    Pripravi numpy.ndarray za oddajo (flatten, skrajša na MAX_LEN in pretvori v seznam).
+    """
+    flat = array.flatten()
+    if len(flat) > MAX_LEN:
+        inc = len(flat) // MAX_LEN + 1
+        flat = flat[::inc]
+    return flat.tolist()
 
 
 def data_to_json(object):
@@ -70,7 +73,13 @@ def data_to_json(object):
     """
 
     if isinstance(object, np.ndarray):
-        return {'type': str(np.ndarray), 'dtype': str(object.dtype), 'tolist': object.tolist()}
+        return {
+            'type': str(np.ndarray), 
+            'dtype': str(object.dtype), 
+            'shape': object.shape,
+            'mean': np.mean(object), 
+            'tolist': prepare_ndarray(object)
+            }
 
     if isinstance(object, complex):
         return (object.real, object.imag)
@@ -86,7 +95,6 @@ def data_to_json(object):
 
 def poslji(odgovor, id, st):
     """ Funkcija pošlje rešitev na strežnik.
-
     :param odgovor: spremenljivka nosilka odgovora
     :param id: identifikacijska številka naloge
     :param st: zaporedna številka odgovora
