@@ -45,6 +45,12 @@ def pripravi_resitev(odgovor):
             out['tip'] = tip
             out['vrednost'] = odgovor
             return out
+        elif tip in ['list', 'tuple'] and len(odgovor) > MAX_LEN:
+            korak = len(odgovor) // MAX_LEN + 1
+            out['tip'] = tip
+            out['korak'] = korak
+            out['vrednost'] = odgovor[::korak]
+            return out
         else:
             raise Exception(f'Napaka: Oddan odgovor, z velikostjo {bit_size/1e3:5.2f} kb, presega največjo dovoljeno velikost {MAX_SIZE/1e3:5.2f} kb.')
     
@@ -63,6 +69,7 @@ def prepare_ndarray(array, MAX_LEN=15):
     Poimenovanje ključev je pomembno pri preverjanju odgovorov - naj se ne spreminja!
     """
     flat = array.flatten()
+    inc = 1
     if len(flat) > MAX_LEN:
         inc = len(flat) // MAX_LEN + 1
         flat = flat[::inc]
@@ -74,6 +81,7 @@ def prepare_ndarray(array, MAX_LEN=15):
         'shape': array.shape,
         'flat': flat_list,
         'flat_size': len(flat_list),
+        'korak': inc
     }
 
 
