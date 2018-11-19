@@ -101,7 +101,7 @@ def visualize(colors, values=None, cmap='PRGn',f_precision=1, savepath='', fps=1
     plt.axis('off')
 
     # tekst
-    m_text = ax.text(-1, -1, 
+    m_text = ax.text(-0.6, -0.8, 
                     '',
                     verticalalignment='center', 
                     horizontalalignment='center',
@@ -188,7 +188,7 @@ def visualize(colors, values=None, cmap='PRGn',f_precision=1, savepath='', fps=1
     ani = animation.FuncAnimation(fig, animate, np.arange(1, len(colors)),
                             interval=1000/fps, blit=True)
     if savepath:
-        writer = animation.PillowWriter(fps=fps)
+        writer = animation.PillowWriter(fps=fps, loop=0)
         ani.save(savepath, writer)
         
     return
