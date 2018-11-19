@@ -191,4 +191,4 @@ def visualize(colors, values=None, cmap='PRGn',f_precision=1, savepath='', fps=1
         writer = animation.PillowWriter(fps=fps)
         ani.save(savepath, writer)
         
-    return ani
+    return
