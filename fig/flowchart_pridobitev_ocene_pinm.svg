@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="290mm"
+   height="100mm"
+   viewBox="0 0 290 100"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="flowchart_pridobitev_ocene_pinm.svg"
+   inkscape:export-filename="C:\_j\Work Janko\Pedagosko delo\_ predavanja\Programiranje in numerične metode\pypinm\fig\flowchart_pridobitev_ocene_pinm.png"
+   inkscape:export-xdpi="183.61"
+   inkscape:export-ydpi="183.61">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker5302"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path5300"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker5250"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path5248" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker5198"
+       style="overflow:visible;"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path5196"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker5158"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path5156" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker4915"
+       style="overflow:visible;"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4913"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#7fff2a;stroke-width:1pt;stroke-opacity:1;fill:#7fff2a;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path4598"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#7fff2a;stroke-width:1pt;stroke-opacity:1;fill:#7fff2a;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.4077083"
+     inkscape:cx="548.0315"
+     inkscape:cy="227.18324"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g941"
+     showgrid="false"
+     inkscape:window-width="3624"
+     inkscape:window-height="2093"
+     inkscape:window-x="-18"
+     inkscape:window-y="-18"
+     inkscape:window-maximized="1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.9898891,-4.422514)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5250)"
+       d="m 209.45912,41.781531 c 8.88672,-0.267269 7.34662,-17.69936 17.2968,-22.467428 l 2.94007,-1.408863"
+       id="path1119"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5302)"
+       d="m 144.07266,18.964798 c 12.91573,2.14747 8.57759,18.436802 20.5225,22.416445 0.50982,0.169854 3.7467,0.893529 3.7467,0.893529"
+       id="path1062"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114" />
+    <path
+       style="fill:none;stroke:#7fff2a;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4915)"
+       d="m 144.07266,18.964798 c 9.85066,-0.409563 85.62333,-1.059558 85.62333,-1.059558"
+       id="path1148"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114" />
+    <path
+       style="fill:none;stroke:#7fff2a;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="M 63.122023,38.086307 C 94.683034,28.542411 68.980655,19.093005 89.58036,19.093005"
+       id="path835"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5158)"
+       d="m 63.122023,38.086307 c 9.07143,19.465774 -3.307294,21.922618 26.174851,21.733632"
+       id="path837"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot878"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.66666698px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="scale(0.26458333)"><flowRegion
+         id="flowRegion880"><rect
+           id="rect882"
+           width="34.285713"
+           height="16.785715"
+           x="410"
+           y="74.662544" /></flowRegion><flowPara
+         id="flowPara884" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="46.841228"
+       y="59.685268"
+       id="text893"
+       transform="rotate(-23.779317)"
+       inkscape:transform-center-x="-0.94110419"
+       inkscape:transform-center-y="-4.9885978"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114"><tspan
+         sodipodi:role="line"
+         id="tspan891"
+         x="46.841228"
+         y="59.685268"
+         style="stroke-width:0.26458332">Da</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="60.002884"
+       y="-51.531403"
+       id="text897"
+       transform="rotate(73.978532)"
+       inkscape:transform-center-x="-2.447905"
+       inkscape:transform-center-y="1.6701547"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114"><tspan
+         sodipodi:role="line"
+         id="tspan895"
+         x="60.002884"
+         y="-51.531403"
+         style="stroke-width:0.26458332">Ne</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5198)"
+       d="m 144.611,58.679175 c 7.85928,-1.062102 23.73086,-16.404403 23.73086,-16.404403"
+       id="path983"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="141.28403"
+       y="69.935814"
+       id="text893-6"
+       transform="rotate(-5.8308429)"
+       inkscape:transform-center-x="-2.5330693"
+       inkscape:transform-center-y="-4.6785971"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114"><tspan
+         sodipodi:role="line"
+         id="tspan891-8"
+         x="141.28403"
+         y="69.935814"
+         style="stroke-width:0.26458332">Da</tspan></text>
+    <g
+       id="g1040"
+       transform="translate(-88.988667,-2.4255016)"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114">
+      <rect
+         y="11.452301"
+         x="178.49986"
+         height="20"
+         width="55"
+         id="rect815-3-3"
+         style="opacity:1;fill:#e5ffd5;fill-opacity:1;stroke:none;stroke-width:0.95193279;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <text
+         id="text1116"
+         y="22.71734"
+         x="189.39313"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:5.64444447px;stroke-width:0.26458332"
+           y="22.71734"
+           x="189.39313"
+           id="tspan1114"
+           sodipodi:role="line">Ustni zagovor</tspan></text>
+    </g>
+    <g
+       id="g961"
+       transform="translate(-90.516785,-0.34621291)"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114">
+      <rect
+         y="34.029846"
+         x="259.05707"
+         height="16.409225"
+         width="40.825893"
+         id="rect999"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:0.80364478;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <text
+         id="text1120"
+         y="41.555775"
+         x="279.46243"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:5.64444447px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="41.555775"
+           x="280.0853"
+           id="tspan1118"
+           sodipodi:role="line">Izpit </tspan><tspan
+           style="font-size:3.88055563px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+           y="45.828209"
+           x="279.46243"
+           sodipodi:role="line"
+           id="tspan950">z ustnim zagovorom</tspan></text>
+    </g>
+    <g
+       id="g1117"
+       transform="translate(-53.785463,-0.33940291)"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114">
+      <rect
+         y="9.3661995"
+         x="283.44659"
+         height="20"
+         width="55"
+         id="rect1209"
+         style="opacity:1;fill:#e5ffd5;fill-opacity:1;stroke:none;stroke-width:1.14824557;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <text
+         id="text967"
+         y="20.727701"
+         x="288.09735"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:5.64444447px;stroke-width:0.26458332"
+           y="20.727701"
+           x="288.09735"
+           id="tspan965"
+           sodipodi:role="line">Opravljen predmet</tspan></text>
+    </g>
+    <g
+       id="g941"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114">
+      <rect
+         y="23.807644"
+         x="7.9898891"
+         height="30"
+         width="55"
+         id="rect815"
+         style="opacity:1;fill:#e5ffd5;fill-opacity:1;stroke:none;stroke-width:0.59751058;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <text
+         id="text819"
+         y="35.042282"
+         x="12.22331"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="35.042282"
+           x="12.22331"
+           id="tspan817"
+           sodipodi:role="line">Vaje  ≥  50 %</tspan><tspan
+           id="tspan821"
+           style="stroke-width:0.26458332"
+           y="38.922836"
+           x="12.22331"
+           sodipodi:role="line">Domače naloge  ≥  50 %</tspan><tspan
+           style="stroke-width:0.26458332"
+           y="42.803394"
+           x="12.22331"
+           sodipodi:role="line"
+           id="tspan890">Projekt  ≥  50 %</tspan></text>
+    </g>
+    <g
+       id="g948"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114">
+      <rect
+         y="49.256107"
+         x="89.647942"
+         height="20"
+         width="55"
+         id="rect815-7"
+         style="opacity:1;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:0.48786533;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+      <text
+         id="text819-6"
+         y="56.264214"
+         x="93.616501"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="56.264214"
+           x="93.616501"
+           id="tspan817-5"
+           sodipodi:role="line">Vaje   ≥  40 %</tspan><tspan
+           id="tspan821-9"
+           style="stroke-width:0.26458332"
+           y="60.144768"
+           x="93.616501"
+           sodipodi:role="line">Domače naloge  ≥  40 %</tspan><tspan
+           id="tspan823-8"
+           style="stroke-width:0.26458332"
+           y="64.025322"
+           x="93.616501"
+           sodipodi:role="line">Projekt  ≥  40 %</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="146.30824"
+       y="16.156223"
+       id="text893-7-4"
+       transform="rotate(0.53640718)"
+       inkscape:transform-center-x="-3.0693985"
+       inkscape:transform-center-y="-4.3534227"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114"><tspan
+         sodipodi:role="line"
+         id="tspan891-0-5"
+         x="146.30824"
+         y="16.156223"
+         style="stroke-width:0.26458332">Uspešno</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="93.46801"
+       y="-122.70303"
+       id="text893-7-4-9"
+       transform="rotate(61.13999)"
+       inkscape:transform-center-x="-5.2699164"
+       inkscape:transform-center-y="0.37930841"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114"><tspan
+         sodipodi:role="line"
+         id="tspan891-0-5-4"
+         x="93.46801"
+         y="-122.70303"
+         style="stroke-width:0.26458332">Neuspešno</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="56.121742"
+       y="209.70613"
+       id="text893-7-4-6"
+       transform="rotate(-65.23943)"
+       inkscape:transform-center-x="2.9907512"
+       inkscape:transform-center-y="-4.5596354"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114"><tspan
+         sodipodi:role="line"
+         id="tspan891-0-5-5"
+         x="56.121742"
+         y="209.70613"
+         style="stroke-width:0.26458332">Uspešno</tspan></text>
+    <g
+       id="g975"
+       transform="translate(186.08676,-16.254721)"
+       inkscape:export-xdpi="183.6114"
+       inkscape:export-ydpi="183.6114">
+      <g
+         transform="translate(1.3229166,5.1026786)"
+         id="g1228">
+        <g
+           id="g960">
+          <rect
+             y="69.753128"
+             x="6.9151521"
+             height="40.443451"
+             width="90.336304"
+             id="rect1159"
+             style="opacity:1;fill:#ffccaa;fill-opacity:1;stroke:none;stroke-width:0.51850188;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+          <text
+             id="text1096"
+             y="77.838989"
+             x="9.3544331"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1;font-family:Cambria;-inkscape-font-specification:Cambria;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             xml:space="preserve"><tspan
+               style="font-size:6.3499999px;stroke-width:0.26458332"
+               y="77.838989"
+               x="9.3544331"
+               id="tspan1094"
+               sodipodi:role="line">Ocenjevanje vaj:</tspan><tspan
+               id="tspan1098"
+               style="stroke-width:0.26458332"
+               y="82.268173"
+               x="9.3544331"
+               sodipodi:role="line" /><tspan
+               id="tspan1100"
+               style="stroke-width:0.26458332"
+               y="86.148735"
+               x="9.3544331"
+               sodipodi:role="line">- Ocenjeni ste lahko na vsaki vaji</tspan><tspan
+               id="tspan1102"
+               style="stroke-width:0.26458332"
+               y="90.029289"
+               x="9.3544331"
+               sodipodi:role="line">- Možne ocene: 0 %, 50 %, 75 % in 100 %</tspan><tspan
+               id="tspan1104"
+               style="stroke-width:0.26458332"
+               y="93.909843"
+               x="9.3544331"
+               sodipodi:role="line">- Če niste prisotni na vaji: 0 %</tspan><tspan
+               id="tspan1106"
+               style="stroke-width:0.26458332"
+               y="97.790398"
+               x="9.3544331"
+               sodipodi:role="line" /><tspan
+               id="tspan1108"
+               style="stroke-width:0.26458332"
+               y="101.67095"
+               x="9.3544331"
+               sodipodi:role="line">- Negativno oceno vaje lahko popravljate</tspan><tspan
+               id="tspan1110"
+               style="stroke-width:0.26458332"
+               y="105.55151"
+               x="9.3544331"
+               sodipodi:role="line">  na <tspan
+   id="tspan1112"
+   style="font-weight:bold">naslednjih</tspan> govorilnih urah (dobite max. 75 %)</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
