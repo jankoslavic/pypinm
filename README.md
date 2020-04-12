@@ -58,6 +58,10 @@ Pripravite novi Jupyter kernel (jedro):
 ```
 ipython kernel install --user --name=pinm
 ```
+Potem je treba namestiti še:
+```
+jupyter contrib nbextension install
+```
 
 Jupyter notebook jedro `pinm` dostopamo tako, da pokličemo "jupyter notebook" in potem v programu izberemo ustrezno jedro (kernel).
 Okolje `venv` aktiviramo tako, da se nahajamo v osnovni mapi repozitorija in sprožimo:
