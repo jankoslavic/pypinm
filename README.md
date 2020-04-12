@@ -40,27 +40,27 @@ Opomba: gre za napredno uporabo; uporabljajte previdno.
 
 Nameščen mora biti Python in pip, nato namestite Virtual Environment (nahajate se v osnovni mapi tega repozitorija in v lupini z administratorskimi pravicami):
 ```
->>>pip install -r virtualenv
+pip install -r virtualenv
 ```
 Sedaj ustvarite virtualno okolje (kreirala se bo nova podmapa venv):
 ```
->>>virtualenv venv
+virtualenv venv
 ```
 Akrivirate virtualno okolje:
 ```
->>>venv\Scripts\activate
+venv\Scripts\activate
 ```
 Namestite vse potrebne pakete:
 ```
->>>pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 Pripravite novi Jupyter kernel (jedro):
 ```
->>>ipython kernel install --user --name=pinm
+ipython kernel install --user --name=pinm
 ```
 
 Jupyter notebook jedro `pinm` dostopamo tako, da pokličemo "jupyter notebook" in potem v programu izberemo ustrezno jedro (kernel).
 Okolje `venv` aktiviramo tako, da se nahajamo v osnovni mapi repozitorija in sprožimo:
 ```
->>>venv\Scripts\activate
+venv\Scripts\activate
 ```
