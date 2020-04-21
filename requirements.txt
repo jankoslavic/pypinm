@@ -6,13 +6,11 @@ ipython-genutils
 jupyter-client
 jupyter-core
 matplotlib
-numpy
 pandas
 pylint
 PyQt5
 PyQt5-sip
 QtPy
-scipy
 tqdm
 xlrd
 xlwt
@@ -23,3 +21,5 @@ lvm_read
 pytest
 numba
 jupyter_contrib_nbextensions
+skyfield
+gtts
