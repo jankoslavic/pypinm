@@ -87,7 +87,8 @@ def prepare_ndarray(array, MAX_LEN=15):
 
 def data_to_json(object):
     """
-    Pripravi posredovan objekt za JSON serilizacijo.
+    Pripravi posredovan objekt za JSON serilizacijo. Uporabljen v primeur, ko
+    pride do napake pri pretvorbi objekta v JSON.
     """
     if isinstance(object, np.ndarray):
         return prepare_ndarray(object)
@@ -101,7 +102,7 @@ def data_to_json(object):
     if type(object) in np.sctypes['float']:
         return float(object)
 
-    raise TypeError(f'Object of type {type(object)} not serializable')
+    raise TypeError(f'Napaka pri pretvorbi podatka tipa {type(object)} v JSON. Preverite posredovan odgovor!')
 
 
 def poslji(odgovor, id, st):
