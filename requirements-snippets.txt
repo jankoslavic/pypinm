@@ -1,2 +1,8 @@
 skyfield
 gtts
+opencv-python
+face_recognition
+voila
+voila-vuetify
+bqplot
+ipyvuetify
