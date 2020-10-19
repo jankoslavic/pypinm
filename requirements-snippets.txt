@@ -6,3 +6,4 @@ voila
 voila-vuetify
 bqplot
 ipyvuetify
+ipyvolume

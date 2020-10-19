@@ -21,3 +21,4 @@ lvm_read
 pytest
 numba
 jupyter_contrib_nbextensions
+youtube_dl
