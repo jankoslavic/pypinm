@@ -1,3 +1,4 @@
+cmake
 skyfield
 gtts
 opencv-python
