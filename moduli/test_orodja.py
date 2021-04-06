@@ -36,3 +36,7 @@ def test_simbolni_izraz():
     b = (x**4)**(1/2)
     np.testing.assert_equal(a==b,True)
 
+
+
+if __name__ == '__main__':
+    test_simbolni_izraz()
