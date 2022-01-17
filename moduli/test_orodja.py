@@ -31,9 +31,9 @@ def test_vrstica():
     np.testing.assert_allclose(b, zamenjana_0_1_vrstica)
 
 def test_simbolni_izraz():
-    x = sym.symbols('x', positive=True) # poskusite tukaj positive=False
+    x = sym.symbols('x', positive=False) # poskusite tukaj positive=False
     a = x**2
-    b = (x**4)**(1/2)
+    b = sym.sqrt(x**4)
     np.testing.assert_equal(a==b,True)
 
 
