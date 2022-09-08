@@ -1,3 +1,5 @@
+# Ta repozitorij predstavlja arhiv in se več ne razvija. Aktiven repozitorij: [https://github.com/jankoslavic/pynm](https://github.com/jankoslavic/pynm)
+
 # Programiranje in numerične metode v ekosistemu Pythona
 
 Predavanja temeljijo na ekosistemu Python in bodo izvedena v obliki Jupyter notebook-ov. 
